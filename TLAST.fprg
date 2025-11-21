@@ -4,10 +4,10 @@
         <attribute name="name" value="TLAST"/>
         <attribute name="authors" value="MUG1II"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-11-21 09:42:31 AM"/>
+        <attribute name="saved" value="2025-11-21 09:46:44 AM"/>
         <attribute name="created" value="TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTIxOzA4OjIyOjA4IEFNOzI3NTk="/>
         <attribute name="edited" value="TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTIxOzA5OjQyOjExIEFNOzE7TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTIxOzA4OjIyOjA4IEFNOzU2ODI="/>
-        <attribute name="edited" value="TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTIxOzA5OjQyOjMxIEFNOzI7Mjg2Nw=="/>
+        <attribute name="edited" value="TVVHMUlJO0xBUFRPUC1CQ00wRUxJUzsyMDI1LTExLTIxOzA5OjQ2OjQ0IEFNOzM7Mjg3Ng=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -167,14 +167,15 @@
                 </for>
             </for>
             <for variable="i" start="0" end="count-1" direction="inc" step="1">
-                <output expression="&quot;Prioritas: &quot; &amp; ToFixed(priorities[i], 2)" newline="True"/>
                 <if expression="statuses[i] == &quot;Selesai&quot;">
                     <then>
-                        <assign variable="outputString" expression="descriptions[i] &amp; &quot;|&quot; &amp; codes[i] &amp; &quot;|&quot; &amp; courses[i] &amp; &quot;|&quot; &amp; lecturers[i] &amp; &quot;|&quot; &amp; filenames[i] &amp; &quot;|&quot; &amp; statuses[i]"/>
+                        <output expression="&quot;Prioritas: &quot; &amp; ToFixed(priorities[i], 2)" newline="True"/>
+                        <output expression="descriptions[i] &amp; &quot;|&quot; &amp; codes[i] &amp; &quot;|&quot; &amp; courses[i] &amp; &quot;|&quot; &amp; lecturers[i] &amp; &quot;|&quot; &amp; filenames[i] &amp; &quot;|&quot; &amp; statuses[i]" newline="True"/>
                     </then>
                     <else>
                         <assign variable="recText" expression="GetRecommendation(priorities[i])"/>
-                        <assign variable="outputString" expression="descriptions[i] &amp; &quot;|&quot; &amp; codes[i] &amp; &quot;|&quot; &amp; courses[i] &amp; &quot;|&quot; &amp; lecturers[i] &amp; &quot;|&quot; &amp; deadlines[i] &amp; &quot;|&quot; &amp; filenames[i] &amp; &quot;|&quot; &amp; statuses[i] &amp; &quot;|&quot; &amp; recText"/>
+                        <output expression="&quot;Prioritas: &quot; &amp; ToFixed(priorities[i], 2)" newline="True"/>
+                        <output expression="descriptions[i] &amp; &quot;|&quot; &amp; codes[i] &amp; &quot;|&quot; &amp; courses[i] &amp; &quot;|&quot; &amp; lecturers[i] &amp; &quot;|&quot; &amp; filenames[i] &amp; &quot;|&quot; &amp; statuses[i]" newline="True"/>
                     </else>
                 </if>
             </for>

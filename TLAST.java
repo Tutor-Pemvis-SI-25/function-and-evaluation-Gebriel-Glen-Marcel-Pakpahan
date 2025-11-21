@@ -115,12 +115,13 @@ public class TLAST {
             }
         }
         for (i = 0; i <= count - 1; i++) {
-            System.out.println("Prioritas: " + toFixed(priorities[i],2));
             if (statuses[i] == "Selesai") {
-                outputString = descriptions[i] + "|" + codes[i] + "|" + courses[i] + "|" + lecturers[i] + "|" + filenames[i] + "|" + statuses[i];
+                System.out.println("Prioritas: " + toFixed(priorities[i],2));
+                System.out.println(descriptions[i] + "|" + codes[i] + "|" + courses[i] + "|" + lecturers[i] + "|" + filenames[i] + "|" + statuses[i]);
             } else {
                 recText = getRecommendation(priorities[i]);
-                outputString = descriptions[i] + "|" + codes[i] + "|" + courses[i] + "|" + lecturers[i] + "|" + deadlines[i] + "|" + filenames[i] + "|" + statuses[i] + "|" + recText;
+                System.out.println("Prioritas: " + toFixed(priorities[i],2));
+                System.out.println(descriptions[i] + "|" + codes[i] + "|" + courses[i] + "|" + lecturers[i] + "|" + filenames[i] + "|" + statuses[i]);
             }
         }
         System.out.println(outputString);
